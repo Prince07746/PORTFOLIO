@@ -1,0 +1,494 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  @font-face {
+    font-family: 'AfacadFlux';
+    src: url('./fonts/AfacadFlux-VariableFont_slnt\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  @font-face {
+    font-family: 'Afaca2';
+    src: url('./fonts/YatraOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+  /* Body and global styles */
+  body {
+    font-family: 'Afaca2', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html::-webkit-scrollbar{
+    width: 3px;
+    }
+    html::-webkit-scrollbar-thumb{
+    background: #00bcd4;
+    }
+    html::-webkit-scrollbar-track{
+    background: gray;
+    }
+  
+
+
+
+
+
+
+
+
+  /* Navbar Styling  ==============================================================================*/
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: white;
+    border-bottom: #00bcd4 solid 5px;
+    z-index: 100;
+  }
+  .logos{
+    margin-top: 15px;
+  }
+  .navbar .logo a {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex; /* Keep the links visible in large screen sizes */
+    gap: 2rem;
+    transition: all 0.4s;
+    z-index: 99;
+  }
+  
+  .navbar .nav-links li {
+    display: inline-block;
+    transition: all 0.5s;
+  }
+  
+  .navbar .nav-links li:hover {
+    transform: scale(0.9);
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: all 0.3s;
+  }
+  
+  .navbar .nav-links li a:hover {
+    color: #00bcd4; /* Hover effect with cool color */
+  }
+  
+  /* Hamburger menu for small screens */
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+  
+
+/* Light/Dark Mode Theme Colors */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+/* Light/Dark Mode Toggle Button */
+.theme-toggle {
+  position: absolute;
+  left: 40%;
+  top: 0%;
+  background: rgba(22, 22, 22, 0.505);
+  padding: 5px 8px 8px 8px;
+  border-bottom-left-radius: 70%;
+  border-bottom-right-radius: 70%;
+  width: 70px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color:#00bcd4;
+}
+
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: flex; /* Hide the nav links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 63px;
+      left: 0px;
+      padding: 30px;
+      background-color: #333;
+      transition: all 0.4s;
+      font-size: larger;
+      border-bottom-right-radius: 20px;
+      border-right: #00bcd4 solid 5px;
+      z-index: 99;
+    }
+  
+    .nav-links.active {
+      display: none; /* Show nav links when active */
+      transition: all 0.3s;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+      transition: all 0.3s;
+    }
+  
+    .hamburger-menu.active .bar:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+      transition: all 0.3s;
+    }
+  
+    .hamburger-menu.active .bar:nth-child(2) {
+        transition: all 0.3s;
+      opacity: 0;
+    }
+  
+    .hamburger-menu.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+      transition: all 0.3s;
+    }
+  }
+  /* ============================================================================================= */
+
+
+
+
+
+
+
+
+
+
+  /*  ====================================  PROJECT CAROUSEL SHWCASE  ========================================================================================= */
+  /* Carousel */
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 400px;
+  width: 50%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute;
+  left: 35%;
+  width: 250px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.087);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s, opacity 0.5s;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.card img {
+  width: 25%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #00bcd4;
+}
+
+.card p {
+  font-size: 12px;
+  color: #666;
+}
+
+.card .logos img {
+  width: 30px;
+  margin: 5px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 97;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+
+     /* Carousel */
+.carousel {
+ width: 100%;
+}
+.card {
+left: 27%;
+}
+  }
+
+
+
+
+
+  /* ============================================================================================================================================ */
+
+
+
+
+
+
+  /* ======================================= RESUME =========================================================================================== */
+
+  #resume{
+    width: 40%;
+    text-align: left;
+    position: absolute;
+    right: 10px;
+    top: 15%;
+    font-family: 'AfacadFlux',sans-serif;
+  }
+
+  #resume #image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #resume #image img{
+    width: 25%;
+    object-fit: cover;
+    border-radius: 50%;
+    border:#00bcd4 dashed 4px;
+  }
+  
+  #resume h2{
+    color: #00bcd4;
+    text-align: center;
+  }
+  #resume p{
+    font-size: 1.1rem;
+    border-left: #00bcd4 solid 3px;
+    border-radius: 20px;
+    padding: 15px;
+  }
+  #resume #role{
+    text-align: center;
+    border: none;
+  }
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+   #resume{
+    position: relative;
+    width: 90%;
+    padding: 25px;
+   }
+   #resume p{
+    font-size: 1rem;
+    border-left: #00bcd4 solid 3px;
+    padding: 15px;
+  }
+  #resume #role{
+    text-align: center;
+  }
+  #resume h2{
+    color: #00bcd4;
+    text-align: center;
+  }
+
+
+  }
+  /* ==== blinking cursor */
+  #cursor {
+    font-weight: bold;
+    color: #00bcd4;
+    background-color:#00bcd4;
+    padding: 2px;
+    border-radius: 3px;
+    animation: blink 0.5s steps(1) infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+
+  /* ========================================================================================================================================== */
+
+
+
+
+/* ============================== logos companies ============================================================================= */
+.companies-logo {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  bottom: 0;
+  width: 180px; /* Adjust width as needed */
+  background-color: rgba(55, 54, 54, 0.111);
+  border-left: #00bcd4 solid 10px;
+  height: max-content;
+  padding: 1px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#companies-g {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#companies-g img {
+  margin-bottom: 15px;
+  width: 40%;
+  border-radius: 50%;
+}
+
+
+
+
+/* ========================================================================================================================= */
+
+
+
+
+
+
+  /* ==================================== EXPERIENCE ==================================================================== */
+
+  .experience-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 5%;
+    height: 500px;
+    overflow-y: scroll;
+    transform: scale(0.86)
+  }
+  .experience-container::-webkit-scrollbar{
+    width: 3px;
+    }
+    .experience-container::-webkit-scrollbar-thumb{
+    background: #00bcd4;
+    }
+    .experience-container::-webkit-scrollbar-track{
+    background: gray;
+    }
+  
+
+  
+  .experience-container .section {
+    flex: 1;
+  }
+  
+  .experience-container .section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #27ae60;
+    display: inline-block;
+    padding-bottom: 0.2rem;
+  }
+  
+  .experience-container .section .cards-e {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: max-content;
+    max-width: 450px;
+    cursor: pointer;
+  }
+  
+  .experience-container .section .cards-e .card-e {
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-container .section .cards-e .card-e:hover {
+    transform: translateY(-10px);
+  }
+  
+  .experience-container .section .cards-e .card-e .year {
+    font-size: 0.9rem;
+    color: #00bcd4;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    border: #00bcd4 solid 2px;
+    padding: 40px 10px 40px 10px;
+    border-radius: 50%;
+    width: max-content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+  }
+  
+  .experience-container .section .cards-e .card-e h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-container .section .cards-e .card-e p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    line-height: 1.4;
+  }
+  #ligne{
+    border-left: 3px solid #00bcd4;
+    border-right: 3px solid #00bcd4;
+    height: 70px;
+    width: 5px;
+    margin-top: 3%;
+    border-radius: 20px;
+  }
+
+
+
+  /* ================================================================================================================= */
