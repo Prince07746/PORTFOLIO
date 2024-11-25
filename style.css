@@ -27,6 +27,8 @@
     font-family: 'Afaca2', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #121212;
+    color: white;
   }
   
   html::-webkit-scrollbar{
@@ -113,10 +115,13 @@
   
 
 /* Light/Dark Mode Theme Colors */
+
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
+
+
 /* Light/Dark Mode Toggle Button */
 .theme-toggle {
   position: absolute;

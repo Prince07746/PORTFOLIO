@@ -12,9 +12,18 @@
 
         const toggleTheme = () => {
           setDarkMode(!darkMode);
+          if (!darkMode) {
+            // Set styles for light mode
+            document.body.style.color = "black";
+            document.body.style.backgroundColor = "white";
+          } else {
+            // Set styles for dark mode
+            document.body.style.color = "white";
+            document.body.style.backgroundColor = "black";
+          }
           document.body.classList.toggle("dark-mode"); // Add/remove class for dark mode
         };
-      
+        
         return (
           <nav className="navbar">
             <div className="logo">
@@ -280,8 +289,8 @@
       }
     };
   
-      const interval = setInterval(typeText, 80); // Adjust speed with the interval time
-      const cursorBlinkInterval = setInterval(blinkCursor, 500); // Blink speed
+      const interval = setInterval(typeText, 10); // Adjust speed with the interval time
+      const cursorBlinkInterval = setInterval(blinkCursor, 200); // Blink speed
   
       // Cleanup function to avoid memory leaks
       return () => {
@@ -335,7 +344,7 @@
                 age: ''
             }
         }
-        
+      
         render(){
         return(
           <div> 
