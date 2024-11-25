@@ -314,9 +314,9 @@
     return(
      <div className="companies-logo">
        <div id="companies-g">
-       <img src="/images/ufc1.png" />
-       <img src="/images/atom.png" />
-       <img src="/images/dgi.png" />
+       <img src="./images/ufc1.png" />
+       <img src="./images/atom.png" />
+       <img src="./images/dgi.png" />
        </div>
      </div>
     );
