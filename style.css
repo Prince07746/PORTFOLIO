@@ -139,6 +139,10 @@ body.dark-mode {
 
   /* Media query for mobile screens */
   @media screen and (max-width: 768px) {
+    .theme-toggle {
+      left: 60%;
+      top: 0%;
+    }
     .nav-links {
       display: flex; /* Hide the nav links by default */
       flex-direction: column;
@@ -394,6 +398,12 @@ left: 27%;
 }
 
 
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+  .companies-logo{
+    display: none;
+  }
+  }
 
 
 /* ========================================================================================================================= */
@@ -511,26 +521,34 @@ left: 27%;
     justify-content: space-around;
     margin-top: 40px;
   }
+
   #skill-section h4{
     color: #00bcd4;
   }
-  #skill-section ul li{
+
+  #soft-skills{ 
+    width: 40%;
+  }
+  #language{
+    width: 40%;
+  }
+  #skill-section #logo-skills{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #skill-section #logo-skills li img{
+    width: 50px;
+    border-radius: 50%;
+  }
+  #skill-section #logo-skills li{
     list-style: none;
-    font-size: large;
-  }
-  #skill-section ul :nth-child(even){
-    color: gray;
-    border-bottom: solid gray 1px;
-    border-radius: 10px;
-    padding: 5px;
-  }
-  #skill-section ul :nth-child(odd){
-    box-shadow: inset 1px 3px 3px #00bcd4;
-    padding: 5px;
+    font-size:medium;
     margin: 10px;
-    border-radius: 5px;
   }
-  #skill-section ul{
+
+
+  #skill-section #skills-title{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 5px;
@@ -538,7 +556,75 @@ left: 27%;
   }
   
 
+  #skill-section #skills-title li{
+    list-style: none;
+    font-size: large;
+  }
+  #skill-section #skills-title li:hover{
+    transform: scale(0.9);
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  #skill-section #skills-title :nth-child(even){
+    box-shadow: inset 1px 3px 3px #10a243;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+  }
 
+  #skill-section #skills-title :nth-child(odd){
+    box-shadow: inset 1px 3px 3px #00bcd4;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+
+
+  #skill-section #language #logo-language{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #skill-section #language #logo-language li img{
+    width: 50px;
+    border-radius: 50%;
+  }
+  #skill-section #language #logo-language li{
+    list-style: none;
+    font-size:medium;
+    margin: 10px;
+  }
+  #skill-section #language #languages-titles li{
+    list-style: none;
+    font-size:medium;
+    margin: 10px;
+  }
+  #skill-section #language #languages-titles{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    gap: 5px;
+  }
+
+  /* Media query for mobile screens */
+  @media screen and (max-width: 768px) {
+    .skills{
+      text-align: center;
+      padding: 20px;
+    }
+    #skill-section{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+    #skill-section #skills-title li{
+      list-style: none;
+      font-size:medium;
+      margin: 10px;
+    }
+  }
 
 
 

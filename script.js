@@ -334,13 +334,27 @@
   const Skills = () =>{
     const language = ["French","English","Italian","Swahili"];
     const skills = ["Java","Spring FrameWork","React","Node.js","Javascript","HTML","CSS","Boostrap","MYSQL","SQL"];
+    const flags = ["congo.png","france.png","italy.png","tanzania.png"];
+    const skillLogo = ["html5.png", "css3.png","nodejs.png","javascript.png",
+       "api.png", "bootstrap.png","socketio.png","express.png","react.png","firebase.png",
+        "angular.png","mysql.png","python.png", "tensorflow.png", "openai.png"
+    ];
+    
+    
     return(
       <div className="skills">
         <h3>SKILLS & Languages</h3>
       <div id="skill-section">
          <div id="soft-skills">
           <h4>Skills</h4>
-            <ul>
+          <ul id="logo-skills">
+            {skillLogo.map(
+              (skill, index) => {
+                return <li key={index}><img src={`./images/${skill}`} /></li>
+              }
+            )}
+          </ul>
+            <ul id="skills-title">
              {skills.map(
                 (skill,index) =>{
                  return <li key={index}>{skill}</li>
@@ -352,7 +366,14 @@
          </div>
          <div id="language">
           <h4>Languages</h4>
-           <ul>
+          <ul id="logo-language">
+            {flags.map(
+              (skill, index) => {
+                return <li key={index}><img src={`./images/${skill}`} /></li>
+              }
+            )}
+          </ul>
+           <ul id="languages-titles">
             {language.map(
               (val,index)=>{
                 return <li key={index}>{val}</li>
