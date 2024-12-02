@@ -497,3 +497,49 @@ left: 27%;
 
 
   /* ================================================================================================================= */
+
+
+
+
+  /* ======================= SKILLS AND LANGUAGE ============================ */
+
+  .skills{
+    text-align: center;
+  }
+  #skill-section{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  #skill-section h4{
+    color: #00bcd4;
+  }
+  #skill-section ul li{
+    list-style: none;
+    font-size: large;
+  }
+  #skill-section ul :nth-child(even){
+    color: gray;
+    border-bottom: solid gray 1px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  #skill-section ul :nth-child(odd){
+    box-shadow: inset 1px 3px 3px #00bcd4;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  #skill-section ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    margin-top: 40px;
+  }
+  
+
+
+
+
+
+  /* ============================================================================ */

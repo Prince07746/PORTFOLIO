@@ -331,6 +331,41 @@
     );
   }
 
+  const Skills = () =>{
+    const language = ["French","English","Italian","Swahili"];
+    const skills = ["Java","Spring FrameWork","React","Node.js","Javascript","HTML","CSS","Boostrap","MYSQL","SQL"];
+    return(
+      <div className="skills">
+        <h3>SKILLS & Languages</h3>
+      <div id="skill-section">
+         <div id="soft-skills">
+          <h4>Skills</h4>
+            <ul>
+             {skills.map(
+                (skill,index) =>{
+                 return <li key={index}>{skill}</li>
+                }
+              )
+              }
+             
+            </ul>
+         </div>
+         <div id="language">
+          <h4>Languages</h4>
+           <ul>
+            {language.map(
+              (val,index)=>{
+                return <li key={index}>{val}</li>
+              }
+            )}
+           </ul>
+         </div>
+       </div>
+      </div>
+
+    );
+  }
+
 
 
     // React component
@@ -353,6 +388,7 @@
             <Introduction name={this.state.name} title={this.state.title} />
             <Company />
             <Experience />
+            <Skills />
           </div>
         );
         }
