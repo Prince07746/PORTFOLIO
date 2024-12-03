@@ -260,7 +260,7 @@
 
   const Introduction = (props) => {
     const dataInfo =
-      "Full-Stack Developer with a passion for crafting innovative, data-driven solutions. Proficient in Java and JavaScript, I excel at building robust, scalable applications from conception to deployment. With expertise in frameworks like Node.js, Express.js, and React, I develop dynamic user interfaces and efficient backend systems. Skilled in database management with MySQL and version control using GitHub, I have a strong foundation in HTML, CSS, and Bootstrap, enabling me to deliver visually appealing and responsive designs. I am committed to creating high-quality software products, thrive in collaborative environments, and am eager to contribute to impactful projects.";
+      "Full-Stack Developer with a passion for crafting innovative, data-driven solutions. Proficient in Java and JavaScript, I excel at building robust, scalable applications from conception to deployment. With expertise in frameworks like Spring, Node.js, Express.js, and React, I develop dynamic user interfaces and efficient backend systems. Skilled in database management with MySQL and version control using GitHub, I have a strong foundation in HTML, CSS, and Bootstrap, enabling me to deliver visually appealing and responsive designs. I am committed to creating high-quality software products, thrive in collaborative environments, and am eager to contribute to impactful projects.";
   
     React.useEffect(() => {
       const textElement = document.getElementById("info");
