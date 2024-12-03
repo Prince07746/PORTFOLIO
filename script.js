@@ -333,11 +333,12 @@
 
   const Skills = () =>{
     const language = ["French","English","Italian","Swahili"];
-    const skills = ["Java","Spring FrameWork","React","Node.js","Javascript","HTML","CSS","Boostrap","MYSQL","SQL"];
-    const flags = ["congo.png","france.png","italy.png","tanzania.png"];
-    const skillLogo = ["html5.png", "css3.png","nodejs.png","javascript.png",
-       "api.png", "bootstrap.png","socketio.png","express.png","react.png","firebase.png",
-        "angular.png","mysql.png","python.png", "tensorflow.png", "openai.png"
+    const skills = ["Java","Spring FrameWork","React","Angular","Node.js","Javascript",
+      "HTML","CSS","Boostrap","MYSQL","SQL"];
+    const flags = ["congo.png","france.png","england.png","italy.png","tanzania.png"];
+    const skillLogo = ["html5.png", "css3.png","spring.png","java.png",
+      "nodejs.png","express.png","javascript.png","react.png",
+      "angular.png","bootstrap.png","mysql.png","python.png"
     ];
     
     

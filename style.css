@@ -64,7 +64,7 @@
     margin-top: 15px;
   }
   .navbar .logo a {
-    font-size: 1.8rem;
+    font-size: 1rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -131,7 +131,7 @@ body.dark-mode {
   padding: 5px 8px 8px 8px;
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 70%;
-  width: 70px;
+  width: 50px;
   cursor: pointer;
   font-size: 1.5rem;
   color:#00bcd4;
@@ -140,8 +140,10 @@ body.dark-mode {
   /* Media query for mobile screens */
   @media screen and (max-width: 768px) {
     .theme-toggle {
-      left: 60%;
+      left: 55%;
       top: 0%;
+      width: 40px;
+      padding: 2px 2px 2px 2px;
     }
     .nav-links {
       display: flex; /* Hide the nav links by default */
@@ -274,8 +276,23 @@ button.next {
  width: 100%;
 }
 .card {
-left: 27%;
+left: 13%;
 }
+button.prev,
+button.next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  background: #33333359;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 97;
+}
+
   }
 
 
@@ -330,7 +347,7 @@ left: 27%;
   @media screen and (max-width: 768px) {
    #resume{
     position: relative;
-    width: 90%;
+    width: 100%;
     padding: 25px;
    }
    #resume p{
@@ -588,6 +605,7 @@ left: 27%;
   }
   #skill-section #language #logo-language li img{
     width: 50px;
+    object-fit: cover;
     border-radius: 50%;
   }
   #skill-section #language #logo-language li{
@@ -619,10 +637,29 @@ left: 27%;
       justify-content: space-around;
       margin-top: 40px;
     }
+    #skill-section #skills-title{
+      padding-right: 10px;
+    }
     #skill-section #skills-title li{
       list-style: none;
-      font-size:medium;
+      font-size: small;
       margin: 10px;
+    }
+    #soft-skills{ 
+      width: 100%;
+      margin: 0 0 50px 0;
+      border-bottom: solid gray 1px;
+      border-radius: 20px;
+      padding: 0 0 40px 0;
+      transform: scale(0.9);
+    }
+    #language{
+      width: 100%;
+      text-align: center;
+      border-top: solid gray 1px;
+      border-radius: 20px;
+      padding: 40px 0 0 0;
+      transform: scale(0.9);
     }
   }
 
