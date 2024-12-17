@@ -60,57 +60,36 @@
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const intervalCurr = React.useRef(null);
   
+   
+
     const cards = [
       {
         id: 1,
-        imgSrc: "nodejs.png",
+        imgSrc: "react.png",
         title: "Personal Portfolio",
-        description: "A sleek and modern portfolio website showcasing my skills, projects, and achievements as a developer.",
-        logos: ["html5.png", "css3.png", "javascript.png"],
+        description:
+          "A sleek and modern portfolio website showcasing my skills, projects, and achievements.",
+        logos: ["html5.png", "css3.png", "javascript.png","react.png"],
       },
       {
         id: 2,
-        imgSrc: "api.png",
-        title: "E-commerce Platform",
-        description: "An online shopping platform with features like a dynamic cart, user authentication, and payment integration.",
-        logos: ["react.png", "nodejs.png", "stripe.png"],
+        imgSrc: "nodejs.png",
+        title: "Forex Trading Platform",
+        description:
+          "A comprehensive forex trading site with user registration, admin dashboards, and payment integration.",
+        logos: ["react.png", "nodejs.png", "mysql.png"],
       },
       {
         id: 3,
-        imgSrc: "bootstrap.png",
-        title: "Weather App",
-        description: "A weather forecasting app providing real-time updates and detailed weather conditions using OpenWeather API.",
-        logos: ["javascript.png", "api.png", "bootstrap.png"],
-      },
-      {
-        id: 4,
-        imgSrc: "mongodb.png",
-        title: "Real-Time Chat Application",
-        description: "A real-time messaging app with group and private chat functionality, built using WebSocket technology.",
-        logos: ["socketio.png", "nodejs.png", "express.png"],
-      },
-      {
-        id: 5,
-        imgSrc: "mysql.png",
-        title: "Expense Tracker",
-        description: "A budget management tool that helps users track income and expenses with interactive charts and reports.",
-        logos: ["react.png", "chartjs.png", "firebase.png"],
-      },
-      {
-        id: 6,
-        imgSrc: "firebase.png",
-        title: "Task Management System",
-        description: "A productivity app to create, assign, and track tasks for individuals or teams with progress monitoring.",
-        logos: ["angular.png", "nodejs.png", "mysql.png"],
-      },
-      {
-        id: 7,
-        imgSrc: "openai.png",
-        title: "AI-Powered Image Generator",
-        description: "An AI tool for generating images based on text input, utilizing advanced machine learning models.",
-        logos: ["python.png", "tensorflow.png", "openai.png"],
+        imgSrc: "nodejs.png",
+        title: "E-commerce Platform",
+        description:
+          "Online shopping platform featuring cart management, user authentication, and payment APIs.",
+        logos: [ "html5.png", "css3.png", "javascript.png","stripe.png", "bootstrap.png"],
       }
     ];
+
+
     
     // Rotate to the next card
     const nextCard = () => {
@@ -179,41 +158,76 @@
   
 
   const Experience = () => {
+
     const education = [
       {
-          year: "2010 - 2012",
-          title: "High School Diploma",
-          description: "Graduated with distinction, focusing on STEM courses such as Mathematics, Physics, and Computer Science.",
+        year: "10 / 2024",
+        title: "Java Programming - Advanced Concepts",
+        institution: "Develhope Training Academy",
+        description: "",
       },
       {
-          year: "2012 - 2016",
-          title: "Bachelor's Degree in Computer Science",
-          description: "Studied core topics like Data Structures, Algorithms, and Software Engineering. Worked on multiple team projects, including a web-based e-commerce platform.",
+        year: "2023 - 2023",
+        title: "Diploma of Education, CCNAv7 Network",
+        institution: "Cisco Networking Academy",
+        description: "",
       },
       {
-          year: "2017 - 2019",
-          title: "Master's Degree in Software Engineering",
-          description: "Specialized in full-stack development, cloud computing, and machine learning. Developed a thesis on distributed systems for scalable web applications.",
-      },
-  ];
-
-  const experience = [
-      {
-          year: "2019 - 2021",
-          title: "UI/UX Designer at Creative Studios",
-          description: "Designed intuitive and visually appealing interfaces for web and mobile apps. Collaborated with developers to enhance user experiences and optimize workflows.",
+        year: "2022 - 2024",
+        title: "Computer Science",
+        institution: "YMCA Comprehensive Institute",
+        description: "",
       },
       {
-          year: "2021 - 2023",
-          title: "Full-Stack Developer at Tech Solutions Inc.",
-          description: "Built robust web applications using React, Node.js, and MongoDB. Implemented RESTful APIs and worked on optimizing application performance.",
+        year: "11 / 2024",
+        title: "Italian Language Certification",
+        institution: "Diaconia Valdese",
+        description: "",
+      },
+    ];
+    
+    const experience = [
+      {
+        year: "Ju24 - Dec24",
+        title: "Web Developer",
+        company: "Mifos Initiative",
+        location: "Kampala, Uganda",
+        description: `
+          Volunteer - Mifos, Kampala, Uganda
+          - Contributed and gained hands-on experience in learning how Java works.
+          - Collaborated with a team of volunteers using GitHub and Zoom to foster a positive and collaborative environment.
+        `,
       },
       {
-          year: "2023 - Now",
-          title: "Frontend Developer at Innovate Labs",
-          description: "Developing modern, responsive web applications using React and TypeScript. Focused on delivering seamless user experiences and maintaining high code quality standards.",
+        year: "Dec23 - Feb24",
+        title: "Computer Technician Intern",
+        company: "WEBSTAR ug",
+        location: "Kampala, Central Region, Uganda",
+        description: `
+          Technical Support Specialist - Hardware and Software Maintenance
+          Responsibilities:
+          - Component Replacement
+          - System Installation and Maintenance
+        `,
       },
-  ];
+      {
+        year: "Ja23 - Feb24",
+        title: "Back-end Developer & Data Analyst Freelancer",
+        company: "Union Funded Capital (UFC)",
+        location: "Kampala, Uganda",
+        description: `
+          WEB DEVELOPER
+          Technologies Used:
+          - Back-end: Node.js, Python, JavaScript, Express, MySQL, SQL
+          - Front-end: HTML, CSS, JavaScript, React, Bootstrap
+          - Hosting: Web hosting, SSL cert, payment API
+          Overview:
+          - Developed a comprehensive forex trading platform with a focus on user registration, account sales, administrative control, and email integration.
+        `,
+      },
+    ];
+    
+    
   
     return (
       <center className="experience-container">
@@ -226,6 +240,7 @@
                 <div className="year">{item.year}</div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
+                <p>{item.institution}</p>
 
                 <div id={index != education.length -1 ?"ligne":""}>
                 </div>
@@ -259,8 +274,17 @@
 
 
   const Introduction = (props) => {
-    const dataInfo =
-      "Full-Stack Developer with a passion for crafting innovative, data-driven solutions. Proficient in Java and JavaScript, I excel at building robust, scalable applications from conception to deployment. With expertise in frameworks like Spring, Node.js, Express.js, and React, I develop dynamic user interfaces and efficient backend systems. Skilled in database management with MySQL and version control using GitHub, I have a strong foundation in HTML, CSS, and Bootstrap, enabling me to deliver visually appealing and responsive designs. I am committed to creating high-quality software products, thrive in collaborative environments, and am eager to contribute to impactful projects.";
+    const dataInfo = `I am Prince Matongo, a full-stack developer with expertise in Java,
+        JavaScript, Node.js, and MySQL. Over the past two years, I have
+        delivered robust and scalable applications, specializing in both
+        front-end and back-end development. Recently, I shifted focus to Java
+        development, implementing OOP principles and efficient database
+        solutions.
+        My experiences include developing trading platforms, e-commerce
+        systems, and volunteering with collaborative teams using tools like
+        GitHub and Zoom. I am passionate about learning, problem-solving, and
+        crafting innovative solutions.
+        `;
   
     React.useEffect(() => {
       const textElement = document.getElementById("info");
@@ -388,6 +412,35 @@
     );
   }
 
+  const Contact = () => {
+    return (
+      <center style={{display:'flex',flexDirection:'column',width:'100%',padding:'30px'}}>
+        <h2>Contact Me</h2>
+      <section id="contact" style={{display:'flex',flexWrap:'wrap',}}>
+        
+        <p style={{margin:'5px'}}>Email: <a href="mailto:davidkitoko13@gmail.com">davidkitoko13@gmail.com</a></p>
+        <p style={{margin:'5px'}}>Phone: <a href="tel:+256774630649">+256774630649</a></p>
+        <p style={{margin:'5px'}}>
+          LinkedIn:{" "}
+          <a
+            href="https://www.linkedin.com/in/matongo-prince-03069b192/"
+            target="_blank"
+          >
+            matongo-prince
+          </a>
+        </p>
+        <p>
+          GitHub:{" "}
+          <a href="https://github.com/Prince07746" target="_blank">
+            Prince07746
+          </a>
+        </p>
+      </section>
+
+      </center>
+    );
+  };
+  
 
 
     // React component
@@ -411,6 +464,7 @@
             <Company />
             <Experience />
             <Skills />
+            <Contact />
           </div>
         );
         }
