@@ -202,121 +202,111 @@ const Navigation = () => {
     );
 };
 
-
-  const Experience = () => {
-
-    const education = [
-      {
-        year: "10 / 2024",
-        title: "Java Programming - Advanced Concepts",
-        institution: "Develhope Training Academy",
-        description: "",
-      },
-      {
-        year: "2023 - 2023",
-        title: "Diploma of Education, CCNAv7 Network",
-        institution: "Cisco Networking Academy",
-        description: "",
-      },
-      {
-        year: "2022 - 2024",
-        title: "Computer Science",
-        institution: "YMCA Comprehensive Institute",
-        description: "",
-      },
-      {
-        year: "11 / 2024",
-        title: "Italian Language Certification",
-        institution: "Diaconia Valdese",
-        description: "",
-      },
-    ];
-    
-    const experience = [
-      {
-        year: "Ju24 - Dec24",
-        title: "Web Developer",
-        company: "Mifos Initiative",
-        location: "Kampala, Uganda",
-        description: `
-          Volunteer - Mifos, Kampala, Uganda
-          - Contributed and gained hands-on experience in learning how Java works.
-          - Collaborated with a team of volunteers using GitHub and Zoom to foster a positive and collaborative environment.
-        `,
-      },
-      {
-        year: "Dec23 - Feb24",
-        title: "Computer Technician Intern",
-        company: "WEBSTAR ug",
-        location: "Kampala, Central Region, Uganda",
-        description: `
-          Technical Support Specialist - Hardware and Software Maintenance
-          Responsibilities:
-          - Component Replacement
-          - System Installation and Maintenance
-        `,
-      },
-      {
-        year: "Ja23 - Feb24",
-        title: "Back-end Developer & Data Analyst Freelancer",
-        company: "Union Funded Capital (UFC)",
-        location: "Kampala, Uganda",
-        description: `
-          WEB DEVELOPER
-          Technologies Used:
-          - Back-end: Node.js, Python, JavaScript, Express, MySQL, SQL
-          - Front-end: HTML, CSS, JavaScript, React, Bootstrap
-          - Hosting: Web hosting, SSL cert, payment API
-          Overview:
-          - Developed a comprehensive forex trading platform with a focus on user registration, account sales, administrative control, and email integration.
-        `,
-      },
-    ];
-    
-    
+const Experience = () => {
+  const education = [
+    {
+      year: "10 / 2024",
+      title: "Java Programming - Advanced Concepts",
+      institution: "Develhope Training Academy",
+      description: "",
+    },
+    {
+      year: "2023 - 2023",
+      title: "Diploma of Education, CCNAv7 Network",
+      institution: "Cisco Networking Academy",
+      description: "",
+    },
+    {
+      year: "2022 - 2024",
+      title: "Computer Science",
+      institution: "YMCA Comprehensive Institute",
+      description: "",
+    },
+    {
+      year: "11 / 2024",
+      title: "Italian Language Certification",
+      institution: "Diaconia Valdese",
+      description: "",
+    },
+  ];
   
-    return (
-      <center className="experience-container">
-        {/* Education Section */}
-        <div className="section">
-          <h2>Education</h2>
-          <div className="cards-e">
-            {education.map((item, index) => (
-              <div className="card-e" key={index}>
-                <div className="year">{item.year}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <p>{item.institution}</p>
-
-                <div id={index != education.length -1 ?"ligne":""}>
-                </div>
-
-              </div>
-              
-            ))}
-          </div>
+  const experience = [
+    {
+      year: "Ju24 - Dec24",
+      title: "Web Developer",
+      company: "Mifos Initiative",
+      location: "Kampala, Uganda",
+      description: `
+        Volunteer - Mifos, Kampala, Uganda
+        - Contributed and gained hands-on experience in learning how Java works.
+        - Collaborated with a team of volunteers using GitHub and Zoom to foster a positive and collaborative environment.
+      `,
+    },
+    {
+      year: "Dec23 - Feb24",
+      title: "Computer Technician Intern",
+      company: "WEBSTAR ug",
+      location: "Kampala, Central Region, Uganda",
+      description: `
+        Technical Support Specialist - Hardware and Software Maintenance
+        Responsibilities:
+        - Component Replacement
+        - System Installation and Maintenance
+      `,
+    },
+    {
+      year: "Ja23 - Feb24",
+      title: "Back-end Developer & Data Analyst Freelancer",
+      company: "Union Funded Capital (UFC)",
+      location: "Kampala, Uganda",
+      description: `
+        WEB DEVELOPER
+        Technologies Used:
+        - Back-end: Node.js, Python, JavaScript, Express, MySQL, SQL
+        - Front-end: HTML, CSS, JavaScript, React, Bootstrap
+        - Hosting: Web hosting, SSL cert, payment API
+        Overview:
+        - Developed a comprehensive forex trading platform with a focus on user registration, account sales, administrative control, and email integration.
+      `,
+    },
+  ];
+  
+  return (
+    <center className="experience-container">
+      {/* Education Section */}
+      <div className="section">
+        <h2>Education</h2>
+        <div className="cards-e">
+          {education.map((item, index) => (
+            <div className="card-e" key={index}>
+              <div className="year">{item.year}</div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <p>{item.institution}</p>
+              <div id={index != education.length -1 ? "ligne" : ""}></div>
+            </div>
+          ))}
         </div>
+      </div>
   
-        {/* Experience Section */}
-        <div className="section">
-          <h2>Experience</h2>
-          <div className="cards-e">
-            {experience.map((item, index) => (
-              <div className="card-e" key={index}>
-                <div className="year">{item.year}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <div id={index != education.length -1 ?"ligne":""}>
-                </div>
-
-              </div>
-            ))}
-          </div>
+      {/* Experience Section */}
+      <div className="section">
+        <h2>Experience</h2>
+        <div className="cards-e">
+          {experience.map((item, index) => (
+            <div className="card-e" key={index}>
+              <div className="year">{item.year}</div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <div id={index != education.length - 1 ? "ligne" : ""}></div>
+            </div>
+          ))}
         </div>
-      </center>
-    );
-  };
-  
+      </div>
+    </center>
+  );
+};
+
 
 
   const Introduction = (props) => {
