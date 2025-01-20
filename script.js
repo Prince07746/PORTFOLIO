@@ -1,59 +1,111 @@
 
 
 
-    const Navigation = () => {
-        const [menuActive, setMenuActive] = React.useState(false);
-        const [name,setName] = React.useState("Prince Matongo");
-        const [darkMode,setDarkMode] = React.useState(false);
+  //   const Navigation = () => {
+  //       const [menuActive, setMenuActive] = React.useState(false);
+  //       const [name,setName] = React.useState("Prince Matongo");
+  //       const [darkMode,setDarkMode] = React.useState(false);
       
-        const toggleMenu = () => {
-          setMenuActive(!menuActive);
-        };
+  //       const toggleMenu = () => {
+  //         setMenuActive(!menuActive);
+  //       };
 
-        const toggleTheme = () => {
-          setDarkMode(!darkMode);
-          if (!darkMode) {
-            // Set styles for light mode
-            document.body.style.color = "black";
-            document.body.style.backgroundColor = "white";
-          } else {
-            // Set styles for dark mode
-            document.body.style.color = "white";
-            document.body.style.backgroundColor = "black";
-          }
-          document.body.classList.toggle("dark-mode"); // Add/remove class for dark mode
-        };
+  //       const toggleTheme = () => {
+  //         setDarkMode(!darkMode);
+  //         if (!darkMode) {
+  //           // Set styles for light mode
+  //           document.body.style.color = "black";
+  //           document.body.style.backgroundColor = "white";
+  //         } else {
+  //           // Set styles for dark mode
+  //           document.body.style.color = "white";
+  //           document.body.style.backgroundColor = "black";
+  //         }
+  //         document.body.classList.toggle("dark-mode"); // Add/remove class for dark mode
+  //       };
         
-        return (
-          <nav className="navbar">
-            <div className="logo">
-              <a href="#home">{name}</a>
-            </div>
-            <ul className={`nav-links ${menuActive ? '' : 'active'}`}>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div
-              className={`hamburger-menu ${menuActive ? 'active' : ''}`}
-              onClick={toggleMenu}
-            >
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </div>
-             {/* Light/Dark Mode Toggle Button */}
+  //       return (
+  //         <nav className="navbar">
+  //           <div className="logo">
+  //             <a href="#home">{name}</a>
+  //           </div>
+  //           <ul className={`nav-links ${menuActive ? '' : 'active'}`}>
+  //             <li><a href="#about">About Me</a></li>
+  //             <li><a href="#projects">Projects</a></li>
+  //             <li><a href="#skills">Skills</a></li>
+  //             <li><a href="#experience">Experience</a></li>
+  //             <li><a href="#contact">Contact</a></li>
+  //           </ul>
+  //           <div
+  //             className={`hamburger-menu ${menuActive ? 'active' : ''}`}
+  //             onClick={toggleMenu}
+  //           >
+  //             <span className="bar"></span>
+  //             <span className="bar"></span>
+  //             <span className="bar"></span>
+  //           </div>
+  //            {/* Light/Dark Mode Toggle Button */}
              
-          <button className="theme-toggle" onClick={toggleTheme}>
-          {darkMode ? <span>&#9728;</span> : <span>&#9790;</span>} {/* ☀ (Light) and ☾ (Dark) */}
-          </button>
+  //         <button className="theme-toggle" onClick={toggleTheme}>
+  //         {darkMode ? <span>&#9728;</span> : <span>&#9790;</span>} {/* ☀ (Light) and ☾ (Dark) */}
+  //         </button>
           
-          </nav>
-        );
-  };
+  //         </nav>
+  //       );
+  // };
 
+const Navigation = () => {
+    const [menuActive, setMenuActive] = React.useState(false);
+    const [name, setName] = React.useState("Prince Matongo");
+    const [darkMode, setDarkMode] = React.useState(false);
+  
+    const toggleMenu = () => {
+      setMenuActive(!menuActive);
+    };
+
+    const toggleTheme = () => {
+      setDarkMode(!darkMode);
+      if (!darkMode) {
+        // Set styles for light mode
+        document.body.style.color = "black";
+        document.body.style.backgroundColor = "white";
+      } else {
+        // Set styles for dark mode
+        document.body.style.color = "white";
+        document.body.style.backgroundColor = "black";
+      }
+      document.body.classList.toggle("dark-mode"); // Add/remove class for dark mode
+    };
+    
+    return (
+      <nav className="navbar">
+        <div className="logo">
+          <a href="#home">{name}</a>
+        </div>
+        <ul className={`nav-links ${menuActive ? '' : 'active'}`}>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div
+          className={`hamburger-menu ${menuActive ? 'active' : ''}`}
+          onClick={toggleMenu}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+         {/* Light/Dark Mode Toggle Button */}
+         
+      <button className="theme-toggle" onClick={toggleTheme}>
+      {darkMode ? <span>&#9728;</span> : <span>&#9790;</span>} {/* ☀ (Light) and ☾ (Dark) */}
+      </button>
+      
+      </nav>
+    );
+};
 
 
   const Projector = () => {
