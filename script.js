@@ -311,16 +311,10 @@ const Experience = () => {
 
   const Introduction = (props) => {
     const dataInfo = `I am Prince Matongo, a full-stack developer with expertise in Java,
-        JavaScript, Node.js, and MySQL. Over the past two years, I have
-        delivered robust and scalable applications, specializing in both
-        front-end and back-end development. Recently, I shifted focus to Java
-        development, implementing OOP principles and efficient database
-        solutions.
-        My experiences include developing trading platforms, e-commerce
-        systems, and volunteering with collaborative teams using tools like
-        GitHub and Zoom. I am passionate about learning, problem-solving, and
-        crafting innovative solutions.
-        `;
+      JavaScript, Node.js, and MySQL. Over the past two years, I have
+      delivered robust and scalable applications, specializing in both
+      front-end and back-end development. I enjoy crafting data-driven,
+      user-centric applications with a focus on performance and security.`;
   
     React.useEffect(() => {
       const textElement = document.getElementById("info");
