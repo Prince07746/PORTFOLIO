@@ -112,8 +112,6 @@ const Navigation = () => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const intervalCurr = React.useRef(null);
   
-   
-
     const cards = [
       {
         id: 1,
@@ -121,7 +119,7 @@ const Navigation = () => {
         title: "Personal Portfolio",
         description:
           "A sleek and modern portfolio website showcasing my skills, projects, and achievements.",
-        logos: ["html5.png", "css3.png", "javascript.png","react.png"],
+        logos: ["html5.png", "css3.png", "javascript.png", "react.png"],
       },
       {
         id: 2,
@@ -137,12 +135,10 @@ const Navigation = () => {
         title: "E-commerce Platform",
         description:
           "Online shopping platform featuring cart management, user authentication, and payment APIs.",
-        logos: [ "html5.png", "css3.png", "javascript.png","stripe.png", "bootstrap.png"],
+        logos: [ "html5.png", "css3.png", "javascript.png", "stripe.png", "bootstrap.png"],
       }
     ];
 
-
-    
     // Rotate to the next card
     const nextCard = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
@@ -163,15 +159,13 @@ const Navigation = () => {
     }
     
     React.useEffect(() => {
- // Auto-rotate every 3 seconds
+      // Auto-rotate every 3 seconds
       lunchcarrousel();
       return () => clearInterval(intervalCurr.current);
     }, []);
 
-  
     return (
-      <div className="carousel" onMouseEnter={stopcarrousel} // Stop rotation on hover
-      onMouseLeave={lunchcarrousel}>
+      <div className="carousel" onMouseEnter={stopcarrousel} onMouseLeave={lunchcarrousel}>
         {cards.map((card, index) => {
           const offset = (index - currentIndex + cards.length) % cards.length;
   
@@ -206,8 +200,8 @@ const Navigation = () => {
         </button>
       </div>
     );
-  };
-  
+};
+
 
   const Experience = () => {
 
