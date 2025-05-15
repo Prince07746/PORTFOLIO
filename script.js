@@ -397,11 +397,11 @@ const Experience = () => {
   const Skills = () =>{
     const language = ["French","English","Italian","Swahili"];
     const skills = ["Java","Spring FrameWork","React","Angular","Node.js","Javascript",
-      "HTML","CSS","Boostrap","MYSQL","SQL"];
+      "HTML","CSS","Boostrap","MYSQL","Mongodb","SQL"];
     const flags = ["congo.png","france.png","england.png","italy.png","tanzania.png"];
     const skillLogo = ["html5.png", "css3.png","spring.png","java.png",
       "nodejs.png","express.png","javascript.png","react.png",
-      "angular.png","bootstrap.png","mysql.png","python.png"
+      "angular.png","bootstrap.png","mysql.png","python.png","mongodb.png"
     ];
     
     
