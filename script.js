@@ -462,8 +462,8 @@ const Experience = () => {
         <h2>Contact Me</h2>
       <section id="contact" style={{display:'flex',flexWrap:'wrap',}}>
         
-        <p style={{margin:'5px'}}>Email: <a href="mailto:davidkitoko13@gmail.com">davidkitoko13@gmail.com</a></p>
-        <p style={{margin:'5px'}}>Phone: <a href="tel:+256774630649">+256774630649</a></p>
+        <p style={{margin:'5px'}}>Email: <a href="mailto:princematongo14@gmail.com">princematongo14@gmail.com</a></p>
+        <p style={{margin:'5px'}}>Phone: <a href="tel:+256774630649">+256774630649 / +39 351 489 5355</a></p>
         <p style={{margin:'5px'}}>
           LinkedIn:{" "}
           <a
