@@ -204,6 +204,7 @@ const Navigation = () => {
 
 const Experience = () => {
   const education = [
+   
     {
       year: "10 / 2024",
       title: "Java Programming - Advanced Concepts",
@@ -231,6 +232,13 @@ const Experience = () => {
   ];
   
   const experience = [
+    {
+      year: "Ap25 - Ap26",
+      title: "Custom SoftWare Engineer associate",
+      company: "Accenture",
+      location: "Naples, Italy",
+      description: ``
+    },
     {
       year: "Ju24 - Dec24",
       title: "Web Developer",
