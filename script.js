@@ -237,7 +237,7 @@ const Experience = () => {
       title: "Custom SoftWare Engineer associate",
       company: "Accenture",
       location: "Naples, Italy",
-      description: ``
+      description: `Custom SoftWare Engineer associate - Accenture , Italy , Naples`
     },
     {
       year: "Ju24 - Dec24",
