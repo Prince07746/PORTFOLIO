@@ -204,7 +204,12 @@ const Navigation = () => {
 
 const Experience = () => {
   const education = [
-   
+    {
+      year: "4 / 2025",
+      title: "Diploma in Computing",
+      institution: "LearnDirect",
+      description: "",
+    },
     {
       year: "10 / 2024",
       title: "Java Programming - Advanced Concepts",
