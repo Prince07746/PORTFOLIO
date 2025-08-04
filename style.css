@@ -388,42 +388,9 @@ button.next {
 
 
 /* ============================== logos companies ============================================================================= */
-.companies-logo {
-  position: absolute;
-  left: 0;
-  top: 110%;
-  bottom: 0;
-  width: 180px; /* Adjust width as needed */
-  background-color: rgba(55, 54, 54, 0.111);
-  border-left: #00bcd4 solid 10px;
-  height: max-content;
-  padding: 1px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-#companies-g {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#companies-g img {
-  margin-bottom: 15px;
-  width: 40%;
-  border-radius: 50%;
-}
 
 
-  /* Media query for mobile screens */
-  @media screen and (max-width: 768px) {
-  .companies-logo{
-    display: none;
-  }
-  }
-
-
-/* ========================================================================================================================= */
+/* ============================================= this was in the previous version but removed now  ========================= */
 
 
 
