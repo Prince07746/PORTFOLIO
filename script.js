@@ -386,18 +386,6 @@ const Experience = () => {
   };
   
 
-  const Company = () =>{
-    return(
-     <div className="companies-logo">
-       <div id="companies-g">
-       <img src={"./images/accenture.png"} />
-       <img src={"./images/ufc1.png"} />
-       <img src={"./images/atom.png"} />
-       <img src={"./images/dgi.png"} />
-       </div>
-     </div>
-    );
-  }
 
   const Skills = () =>{
     const language = ["French","English","Italian","Swahili"];
@@ -505,7 +493,6 @@ const Experience = () => {
             <Navigation />
             <Projector />
             <Introduction name={this.state.name} title={this.state.title} />
-            <Company />
             <Experience />
             <Skills />
             <Contact />
